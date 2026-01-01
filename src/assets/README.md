@@ -1,0 +1,1 @@
+Place your game assets such as images, audio files, etc. in this folder.
