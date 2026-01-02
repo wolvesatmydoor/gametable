@@ -1,0 +1,84 @@
+.expedition-lane {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  min-width: 100px;
+  min-height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.expedition-lane.drag-over {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+  transform: scale(1.02);
+}
+
+.expedition-header {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.expedition-suit {
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.expedition-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.expedition-empty {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Suit-specific colors for lane borders */
+.expedition-lane-red {
+  border-color: rgba(211, 47, 47, 0.4);
+}
+
+.expedition-lane-red.drag-over {
+  border-color: #d32f2f;
+}
+
+.expedition-lane-green {
+  border-color: rgba(56, 142, 60, 0.4);
+}
+
+.expedition-lane-green.drag-over {
+  border-color: #388e3c;
+}
+
+.expedition-lane-blue {
+  border-color: rgba(25, 118, 210, 0.4);
+}
+
+.expedition-lane-blue.drag-over {
+  border-color: #1976d2;
+}
+
+.expedition-lane-yellow {
+  border-color: rgba(245, 124, 0, 0.4);
+}
+
+.expedition-lane-yellow.drag-over {
+  border-color: #f57c00;
+}
+
+.expedition-lane-white {
+  border-color: rgba(97, 97, 97, 0.4);
+}
+
+.expedition-lane-white.drag-over {
+  border-color: #616161;
+}

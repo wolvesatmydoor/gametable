@@ -1,0 +1,100 @@
+.discard-pile {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  min-width: 100px;
+  min-height: 160px;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.discard-pile.drag-over {
+  border-color: #ff9800;
+  background-color: rgba(255, 152, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.discard-pile.can-draw {
+  cursor: pointer;
+  border-style: solid;
+  border-color: rgba(76, 175, 80, 0.5);
+}
+
+.discard-pile.can-draw:hover {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.1);
+  transform: scale(1.05);
+}
+
+.discard-pile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.discard-pile-suit {
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+}
+
+.discard-pile-count {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.discard-pile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.discard-pile-empty {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+}
+
+/* Suit-specific colors for discard pile borders */
+.discard-pile-red.can-draw {
+  border-color: rgba(211, 47, 47, 0.5);
+}
+
+.discard-pile-red.can-draw:hover {
+  border-color: #d32f2f;
+}
+
+.discard-pile-green.can-draw {
+  border-color: rgba(56, 142, 60, 0.5);
+}
+
+.discard-pile-green.can-draw:hover {
+  border-color: #388e3c;
+}
+
+.discard-pile-blue.can-draw {
+  border-color: rgba(25, 118, 210, 0.5);
+}
+
+.discard-pile-blue.can-draw:hover {
+  border-color: #1976d2;
+}
+
+.discard-pile-yellow.can-draw {
+  border-color: rgba(245, 124, 0, 0.5);
+}
+
+.discard-pile-yellow.can-draw:hover {
+  border-color: #f57c00;
+}
+
+.discard-pile-white.can-draw {
+  border-color: rgba(97, 97, 97, 0.5);
+}
+
+.discard-pile-white.can-draw:hover {
+  border-color: #616161;
+}

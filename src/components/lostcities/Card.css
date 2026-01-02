@@ -1,0 +1,93 @@
+.card {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 3px solid #333;
+  background-color: #fff;
+  color: #333;
+  user-select: none;
+}
+
+.card.draggable {
+  cursor: move;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card.dragging {
+  opacity: 0.5;
+}
+
+.card-value {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-suit {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Suit colors */
+.card-red {
+  border-color: #d32f2f;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+}
+
+.card-red .card-value,
+.card-red .card-suit {
+  color: #d32f2f;
+}
+
+.card-green {
+  border-color: #388e3c;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.card-green .card-value,
+.card-green .card-suit {
+  color: #388e3c;
+}
+
+.card-blue {
+  border-color: #1976d2;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+}
+
+.card-blue .card-value,
+.card-blue .card-suit {
+  color: #1976d2;
+}
+
+.card-yellow {
+  border-color: #f57c00;
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+}
+
+.card-yellow .card-value,
+.card-yellow .card-suit {
+  color: #f57c00;
+}
+
+.card-white {
+  border-color: #616161;
+  background: linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%);
+}
+
+.card-white .card-value,
+.card-white .card-suit {
+  color: #424242;
+}
