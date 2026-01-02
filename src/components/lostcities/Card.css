@@ -1,0 +1,99 @@
+.card {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 3px solid;
+  background-color: #1a1a1a;
+  user-select: none;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.card.draggable {
+  cursor: move;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card.dragging {
+  opacity: 0.5;
+}
+
+.card-value {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1;
+}
+
+.card-suit {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'Space Grotesk', sans-serif;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+/* Suit colors matching Figma design - Black cards with colored borders and text */
+.card-red {
+  border-color: #FF6B6B;
+  background: #1a1a1a;
+}
+
+.card-red .card-value,
+.card-red .card-suit {
+  color: #FF6B6B;
+}
+
+.card-green {
+  border-color: #51CF66;
+  background: #1a1a1a;
+}
+
+.card-green .card-value,
+.card-green .card-suit {
+  color: #51CF66;
+}
+
+.card-blue {
+  border-color: #339AF0;
+  background: #1a1a1a;
+}
+
+.card-blue .card-value,
+.card-blue .card-suit {
+  color: #339AF0;
+}
+
+.card-yellow {
+  border-color: #FFA94D;
+  background: #1a1a1a;
+}
+
+.card-yellow .card-value,
+.card-yellow .card-suit {
+  color: #FFA94D;
+}
+
+.card-white {
+  border-color: #E0E0E0;
+  background: #1a1a1a;
+}
+
+.card-white .card-value,
+.card-white .card-suit {
+  color: #E0E0E0;
+}
