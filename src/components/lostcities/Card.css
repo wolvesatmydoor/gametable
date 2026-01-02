@@ -8,12 +8,12 @@
   justify-content: center;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s, box-shadow 0.2s;
-  border: 3px solid #333;
+  border: 2px solid;
   background-color: #fff;
-  color: #333;
   user-select: none;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .card.draggable {
@@ -22,7 +22,7 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .card.dragging {
@@ -30,64 +30,67 @@
 }
 
 .card-value {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 8px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .card-suit {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-/* Suit colors */
+/* Suit colors matching Figma design */
 .card-red {
-  border-color: #d32f2f;
-  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-color: #FF6B6B;
+  background: #FFE5E5;
 }
 
 .card-red .card-value,
 .card-red .card-suit {
-  color: #d32f2f;
+  color: #FF6B6B;
 }
 
 .card-green {
-  border-color: #388e3c;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-color: #51CF66;
+  background: #E7F5E9;
 }
 
 .card-green .card-value,
 .card-green .card-suit {
-  color: #388e3c;
+  color: #51CF66;
 }
 
 .card-blue {
-  border-color: #1976d2;
-  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-color: #339AF0;
+  background: #E7F5FF;
 }
 
 .card-blue .card-value,
 .card-blue .card-suit {
-  color: #1976d2;
+  color: #339AF0;
 }
 
 .card-yellow {
-  border-color: #f57c00;
-  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border-color: #FFA94D;
+  background: #FFF4E6;
 }
 
 .card-yellow .card-value,
 .card-yellow .card-suit {
-  color: #f57c00;
+  color: #FFA94D;
 }
 
 .card-white {
-  border-color: #616161;
-  background: linear-gradient(135deg, #fafafa 0%, #e0e0e0 100%);
+  border-color: #868E96;
+  background: #F8F9FA;
 }
 
 .card-white .card-value,
 .card-white .card-suit {
-  color: #424242;
+  color: #495057;
 }

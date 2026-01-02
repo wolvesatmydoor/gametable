@@ -6,6 +6,7 @@
   flex-direction: column;
   gap: 20px;
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .game-header {
@@ -21,7 +22,9 @@
   margin: 0;
   color: #fff;
   font-size: 36px;
+  font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .reset-button {
@@ -31,10 +34,11 @@
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .reset-button:hover {
