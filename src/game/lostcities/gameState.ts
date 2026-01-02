@@ -3,7 +3,7 @@
  */
 
 import { GameState, GamePhase, TurnPhase, Player, Suit, ExpeditionLane, DiscardPile, Card } from './types';
-import { createDeck, shuffleDeck, dealCards } from './deckUtils';
+import { createDeck, shuffleDeck, dealCards, canPlayCard } from './deckUtils';
 
 export class LostCitiesGame {
   private state: GameState;
@@ -127,12 +127,18 @@ export class LostCitiesGame {
       return false;
     }
 
-    // Remove card from hand
+    // Validate card is in player's hand
     const cardIndex = currentPlayer.hand.findIndex(c => c.id === card.id);
     if (cardIndex === -1) {
       return false;
     }
 
+    // Validate the card can be played (ascending order, investments first)
+    if (!canPlayCard(card, expedition.cards)) {
+      return false;
+    }
+
+    // Remove card from hand and add to expedition
     currentPlayer.hand.splice(cardIndex, 1);
     expedition.cards.push(card);
 
