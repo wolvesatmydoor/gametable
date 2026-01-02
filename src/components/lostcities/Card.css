@@ -1,17 +1,17 @@
 .card {
-  width: 80px;
-  height: 120px;
-  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   transition: transform 0.2s, box-shadow 0.2s;
-  border: 2px solid;
-  background-color: #fff;
+  border: 3px solid;
+  background-color: #1a1a1a;
   user-select: none;
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -21,8 +21,8 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .card.dragging {
@@ -30,24 +30,27 @@
 }
 
 .card-value {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 0;
   font-family: 'Space Grotesk', sans-serif;
+  line-height: 1;
 }
 
 .card-suit {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   font-family: 'Space Grotesk', sans-serif;
+  opacity: 0.8;
+  margin-top: 4px;
 }
 
-/* Suit colors matching Figma design */
+/* Suit colors matching Figma design - Black cards with colored borders and text */
 .card-red {
   border-color: #FF6B6B;
-  background: #FFE5E5;
+  background: #1a1a1a;
 }
 
 .card-red .card-value,
@@ -57,7 +60,7 @@
 
 .card-green {
   border-color: #51CF66;
-  background: #E7F5E9;
+  background: #1a1a1a;
 }
 
 .card-green .card-value,
@@ -67,7 +70,7 @@
 
 .card-blue {
   border-color: #339AF0;
-  background: #E7F5FF;
+  background: #1a1a1a;
 }
 
 .card-blue .card-value,
@@ -77,7 +80,7 @@
 
 .card-yellow {
   border-color: #FFA94D;
-  background: #FFF4E6;
+  background: #1a1a1a;
 }
 
 .card-yellow .card-value,
@@ -86,11 +89,11 @@
 }
 
 .card-white {
-  border-color: #868E96;
-  background: #F8F9FA;
+  border-color: #E0E0E0;
+  background: #1a1a1a;
 }
 
 .card-white .card-value,
 .card-white .card-suit {
-  color: #495057;
+  color: #E0E0E0;
 }
