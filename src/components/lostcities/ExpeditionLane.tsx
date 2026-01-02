@@ -1,17 +1,15 @@
 import React from 'react';
-import { ExpeditionLane as ExpeditionLaneType, Card as CardType } from '../../game/lostcities/types';
+import { ExpeditionLane as ExpeditionLaneType } from '../../game/lostcities/types';
 import Card from './Card';
 import './ExpeditionLane.css';
 
 interface ExpeditionLaneProps {
   expedition: ExpeditionLaneType;
-  onDrop?: (card: CardType, suit: string) => void;
   isCurrentPlayer?: boolean;
 }
 
 const ExpeditionLane: React.FC<ExpeditionLaneProps> = ({ 
   expedition, 
-  onDrop,
   isCurrentPlayer = false
 }) => {
   const [isDragOver, setIsDragOver] = React.useState(false);
@@ -30,11 +28,7 @@ const ExpeditionLane: React.FC<ExpeditionLaneProps> = ({
   const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     setIsDragOver(false);
-    
-    if (onDrop && isCurrentPlayer) {
-      // The card data is handled by the parent component
-      // This just signals that a drop occurred on this lane
-    }
+    // Drop handling is managed by the parent GameBoard component
   };
 
   return (

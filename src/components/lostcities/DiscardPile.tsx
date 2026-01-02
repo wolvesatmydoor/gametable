@@ -1,11 +1,10 @@
 import React from 'react';
-import { DiscardPile as DiscardPileType, Card as CardType, Suit } from '../../game/lostcities/types';
+import { DiscardPile as DiscardPileType, Suit } from '../../game/lostcities/types';
 import Card from './Card';
 import './DiscardPile.css';
 
 interface DiscardPileProps {
   discardPile: DiscardPileType;
-  onDrop?: (card: CardType, suit: Suit) => void;
   onDrawFromDiscard?: (suit: Suit) => void;
   isCurrentPlayer?: boolean;
   canDraw?: boolean;
@@ -13,7 +12,6 @@ interface DiscardPileProps {
 
 const DiscardPile: React.FC<DiscardPileProps> = ({ 
   discardPile, 
-  onDrop,
   onDrawFromDiscard,
   isCurrentPlayer = false,
   canDraw = false
